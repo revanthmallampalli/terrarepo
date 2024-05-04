@@ -83,7 +83,7 @@ resource "aws_instance" "daya" {
     ami = "ami-053b0d53c279acc90"
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.mysg.id ]
-    subnet_id = aws_subnet.mysubnet1.id
+    subnet_id = aws_subnet.mysubnet2.id
     user_data = base64encode(file("userdata1.sh"))
 }
 
